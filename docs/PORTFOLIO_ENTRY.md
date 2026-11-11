@@ -5,7 +5,7 @@ O bloco abaixo segue o padrão observado nos projetos atuais do portfólio: imag
 ## Versão recomendada — Markdown/Jekyll
 
 ```markdown
-[![Dashboard Porsche Enterprise Sales Intelligence](assets/dashboard-porsche-sales-cover.png)](https://porsche-sales-intelligence.opusvix.chatgpt.site)
+[![Dashboard Porsche Enterprise Sales Intelligence](assets/dashboard-porsche-sales-cover.png)](https://opusvix.github.io/dashboard_porsche_sales/)
 
 ### 🏎️ Porsche Enterprise Sales Intelligence
 
@@ -13,7 +13,7 @@ Dashboard executivo de vendas com análise de receita, ticket médio, modelos, c
 
 React TypeScript Analytics Dashboard
 
-[GitHub](https://github.com/opusvix/dashboard_porsche_sales) · [Dashboard](https://porsche-sales-intelligence.opusvix.chatgpt.site)
+[GitHub](https://github.com/opusvix/dashboard_porsche_sales) · [Dashboard](https://opusvix.github.io/dashboard_porsche_sales/)
 ```
 
 ## Versão alternativa — HTML
@@ -22,7 +22,7 @@ Use este bloco somente se a seção de projetos do portfólio estiver escrita di
 
 ```html
 <article class="project-card">
-  <a href="https://porsche-sales-intelligence.opusvix.chatgpt.site"
+  <a href="https://opusvix.github.io/dashboard_porsche_sales/"
      target="_blank"
      rel="noopener noreferrer">
     <img
@@ -44,7 +44,7 @@ Use este bloco somente se a seção de projetos do portfólio estiver escrita di
   <p class="project-links">
     <a href="https://github.com/opusvix/dashboard_porsche_sales"
        target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://porsche-sales-intelligence.opusvix.chatgpt.site"
+    <a href="https://opusvix.github.io/dashboard_porsche_sales/"
        target="_blank" rel="noopener noreferrer">Dashboard</a>
   </p>
 </article>

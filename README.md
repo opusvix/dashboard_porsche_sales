@@ -4,7 +4,7 @@
 
 Dashboard executivo de vendas desenvolvido para transformar uma base comercial de veículos Porsche em uma experiência analítica interativa, responsiva e orientada à tomada de decisão.
 
-> **Acesse o dashboard:** [Porsche Enterprise Sales Intelligence](https://porsche-sales-intelligence.opusvix.chatgpt.site)
+> **Acesse o dashboard:** [Porsche Enterprise Sales Intelligence](https://opusvix.github.io/dashboard_porsche_sales/)
 
 ## Sobre o projeto
 

@@ -21,7 +21,7 @@ Este trabalho também foi uma experiência prática de **desenvolvimento assisti
 
 Essa colaboração mostrou como a IA pode ampliar a produtividade do profissional de dados sem substituir o pensamento crítico, o conhecimento do negócio e a responsabilidade sobre as decisões.
 
-🔗 Dashboard: https://porsche-sales-intelligence.opusvix.chatgpt.site  
+🔗 Dashboard: https://opusvix.github.io/dashboard_porsche_sales/  
 🔗 GitHub: https://github.com/opusvix/dashboard_porsche_sales  
 🔗 Portfólio: https://opusvix.github.io
 
