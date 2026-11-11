@@ -39,6 +39,7 @@ background:rgba(10,10,11,.94);backdrop-filter:blur(18px)}
 .grid2{display:grid;grid-template-columns:1.55fr 1fr;gap:14px;margin-bottom:14px}.grid2.equal{grid-template-columns:1fr 1fr}
 .visual{padding:16px}.visual-head{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:10px}
 .visual h3{font-size:11px;text-transform:uppercase;letter-spacing:1.1px;margin:0;font-weight:600}.visual .hint{color:#777;font-size:9px}
+.alert{margin:10px 0 0;padding:7px 10px;border:1px solid rgba(210,180,122,.45);border-left:3px solid var(--accent);border-radius:8px;background:rgba(210,180,122,.08);color:var(--accent2);font-size:11px;line-height:1.4}.alert[hidden]{display:none}
 .chartwrap{height:300px;position:relative}.chartwrap.sm{height:250px}
 .insightbox{padding:16px}.insightgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .insight{padding:14px;border-radius:14px;background:#101011;border:1px solid #29292b;border-left:2px solid var(--accent)}
@@ -91,7 +92,7 @@ background:rgba(10,10,11,.94);backdrop-filter:blur(18px)}
       <div class="card kpi"><div class="label">Cidade destaque</div><div class="value" id="kCity">—</div><div class="sub" id="kCitySub">—</div></div>
     </div>
     <div class="grid2">
-      <div class="card visual"><div class="visual-head"><h3>Evolução mensal de vendas</h3><span class="hint" id="dateHint"></span></div><div class="chartwrap"><canvas id="monthlyChart"></canvas></div></div>
+      <div class="card visual"><div class="visual-head"><h3>Evolução mensal de vendas</h3><span class="hint" id="dateHint"></span></div><p class="alert" id="dateAlert" role="note" hidden></p><div class="chartwrap"><canvas id="monthlyChart"></canvas></div></div>
       <div class="card visual"><div class="visual-head"><h3>Modelos mais vendidos</h3><span class="hint">clique em uma coluna para filtrar</span></div><div class="chartwrap"><canvas id="modelChart"></canvas></div></div>
     </div>
     <div class="card insightbox"><div class="visual-head"><h3>Insights executivos</h3><div class="quality" id="quality"></div></div><div class="insightgrid" id="executiveInsights"></div></div>
@@ -181,6 +182,8 @@ function renderExecutive(r){
  const me=Object.entries(months).sort((a,b)=>a[0].localeCompare(b[0]));
  chart('monthlyChart','line',me.map(x=>x[0]),me.map(x=>x[1]),{border:'#d2b47a',fill:true,colors:'rgba(210,180,122,.14)',radius:0,scales:{x:{ticks:{color:'#999',maxRotation:45,minRotation:0},grid:{display:false}},y:{ticks:{color:'#999',precision:0},grid:{color:'#262626'},beginAtZero:true}}});
  $('#dateHint').textContent=`${dated.length}/${r.length} registros com data válida`;
+ const undated=r.filter(x=>!validDate(x.date)), revAll=r.reduce((a,x)=>a+Number(x.price||0),0), revOut=undated.reduce((a,x)=>a+Number(x.price||0),0), al=$('#dateAlert');
+ if(revOut>0&&revAll>0){al.textContent=`⚠️ ${pct(revOut/revAll)} da receita (${fmtUSD(revOut)}, ${undated.length} ${undated.length===1?"venda":"vendas"}) está sem data de venda e fica fora deste gráfico. Os totais e KPIs incluem esses valores.`;al.hidden=false;}else{al.hidden=true;}
 
  const models=sortedEntries(groupCount(r,'model')).slice(0,12);
  chart('modelChart','bar',models.map(x=>x[0]),models.map(x=>x[1]),{
