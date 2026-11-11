@@ -90,7 +90,7 @@ Na página principal do repositório:
 4. Em **Website**, informe:
 
    ```text
-   https://porsche-sales-intelligence.opusvix.chatgpt.site
+   https://opusvix.github.io/dashboard_porsche_sales/
    ```
 
 5. Em **Topics**, adicione:
@@ -300,7 +300,7 @@ Você também pode adicionar diretamente o link do dashboard ou do repositório 
 
 ## 5. Links finais
 
-- Dashboard: `https://porsche-sales-intelligence.opusvix.chatgpt.site`
+- Dashboard: `https://opusvix.github.io/dashboard_porsche_sales/`
 - Repositório: `https://github.com/opusvix/dashboard_porsche_sales`
 - Portfólio: `https://opusvix.github.io`
 - LinkedIn: `https://www.linkedin.com/in/mauriciodasilvabarros/`
